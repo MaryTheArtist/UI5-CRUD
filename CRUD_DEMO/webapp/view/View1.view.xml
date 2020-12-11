@@ -1,0 +1,78 @@
+<mvc:View controllerName="kpmg.com.CRUD_DEMO.controller.View1" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="CRUD Operations">
+					<content>
+						<VBox xmlns="sap.m" id="vboxid">
+							<items>
+								<HBox xmlns="sap.m">
+									<items>
+										<Button xmlns="sap.m" id="cbtn" press=".onDataCall" text="Create"></Button>
+										<Button xmlns="sap.m" id="rbtn" press=".onDataCall" text="Read"></Button>
+										<Button xmlns="sap.m" id="ubtn" press=".onDataCall" text="Update"></Button>
+										<Button xmlns="sap.m" id="dbtn" press=".onDataCall" text="Delete"></Button>
+									</items>
+								</HBox>
+								<HBox xmlns="sap.m">
+									<items>
+										<Input xmlns="sap.m" id="uniqueid" placeholder="ID" value="1"></Input>
+										<Input xmlns="sap.m" id="nameid" placeholder="Name" value="test"></Input>
+										<Input xmlns="sap.m" id="emailid" placeholder="Email" value="test@gmail.com"></Input>
+										<Input xmlns="sap.m" id="mobid" placeholder="Mobile" value="8888888888"></Input>
+									</items>
+								</HBox>
+								<HBox xmlns="sap.m">
+									<items>
+										<Table xmlns="sap.m" id="userdatatable" class="sapFDynamicPageAlignContent" items="{ path: '/zuserdataSet'}" headerText="User Data">
+											<columns>
+												<!-- sap.m.Column -->
+												<Column xmlns="sap.m">
+													<header>
+														<Text xmlns="sap.m" text="Id"></Text>
+													</header>
+												</Column>
+												<Column xmlns="sap.m">
+													<header>
+														<Text xmlns="sap.m" text="Name"></Text>
+													</header>
+												</Column>
+												<Column xmlns="sap.m">
+													<header>
+														<Text xmlns="sap.m" text="Email"></Text>
+													</header>
+												</Column>
+												<Column xmlns="sap.m">
+													<header>
+														<Text xmlns="sap.m" text="Mobile"></Text>
+													</header>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem type="Navigation">
+													<cells>
+														<ObjectIdentifier title="{Id}"/>
+													</cells>
+													<cells>
+														<ObjectIdentifier title="{Name}"/>
+													</cells>
+													<cells>
+														<ObjectIdentifier title="{Email}"/>
+													</cells>
+													<cells>
+														<ObjectIdentifier title="{Mobile}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</items>
+								</HBox>
+							</items>
+							<!-- sap.ui.core.Control -->
+						</VBox>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
